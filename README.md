@@ -1,9 +1,5 @@
 # User-Management-App
 
-
-
-# User-Management-App
-
 Overview
 
 The User Management Application is a full-stack web application that allows users to manage a list of users. It features user listing, detailed user views, user addition, and user removal. Built with a Node.js backend and a React frontend, the application offers a responsive design and a user-friendly interface.
