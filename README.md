@@ -73,6 +73,8 @@ PORT=3001
 5. Start the Backend Server:
 
 npm start
+or
+node server.js
 
 The backend server will now be running on http://localhost:3001.
 
