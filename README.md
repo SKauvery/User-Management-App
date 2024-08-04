@@ -2,7 +2,7 @@
 
 Overview
 
-The User Management Application is a full-stack web application that allows users to manage a list of users. It features user listing, detailed user views, user addition, and user removal. Built with a Node.js backend and a React frontend, the application offers a responsive design and a user-friendly interface.
+The User Management Application is a full-stack web application that allows users to manage a list of users. It features user listing, detailed user views, user addition, editing user and user removal. Built with a Node.js backend and a React frontend, the application offers a responsive design and a user-friendly interface.
 
 Tech Stack
 
@@ -38,9 +38,9 @@ cd User-Management-App
 
 2.2. Initialize Backend
 
-1. Navigate to the server directory:
+1. Navigate to the root directory:
 
-cd server
+cd user-management
 
 2. Install Backend Dependencies:
 
@@ -58,7 +58,7 @@ CREATE DATABASE user_management;
 
 4. Set Up Environment Variables:
 
-Create a .env file in the server directory with the following content:
+Create a .env file in the root directory with the following content:
 
 DB_HOST=localhost
 
@@ -78,9 +78,9 @@ The backend server will now be running on http://localhost:3001.
 
 2.3. Initialize Frontend
 
-1. Navigate to the client directory:
+1. Navigate to the frontend directory:
 
-cd ../client
+cd ../frontend
 
 2. Install Frontend Dependencies:
 
@@ -104,7 +104,7 @@ Backend Development
 
 1. Directory Structure
    
-- server/
+- user-management/
 
 	- models/ – Contains database models.
 
@@ -125,6 +125,8 @@ Backend Development
 	- GET /users/:id – Retrieve user details by ID.
 
 	- POST /users – Add a new user.
+   
+ 	- PUT /users/ - Edit a user
 
 	- DELETE /users/:id – Remove a user by ID.
 
@@ -134,13 +136,11 @@ Frontend Development
 
 1. Directory Structure
    
-- client/
+- frontend/
 
 	- src/
 
 		- components/ – Contains React components.
-
-		- pages/ – Contains page components.
 
 		- utils/ – Contains utility functions and helpers.
 
@@ -150,9 +150,9 @@ Frontend Development
 
 3. Key Components
    
-- User List: Displays a list of users with sorting, filtering, and pagination.
+- User List: Displays a list of users with some details and also with sorting, filtering, and pagination. Contains buttons to view more details and delete user.
 
-- User Details: Shows detailed information about a selected user.
+- User Details: Shows detailed information about a selected user and a edit button to edit details.
 
 - Add User Form: Allows adding new users with validation.
 
@@ -184,7 +184,7 @@ Testing
    
 - Unit Tests: Write tests for individual functions and components using a testing framework like Mocha or Jest.
 
-- Integration Tests: Test the integration of different components and API endpoints.
+- Integration Tests: Test the integration of different components and API endpoints with Curl or Postman.
 
 2. Frontend Testing
    
